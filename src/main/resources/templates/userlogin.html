@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org/" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/Login.css}">
+</head>
+
+<body>
+<div class='login' id='login'>
+  <div class='head'>
+  <h1 class='company'>Login Here</h1>
+  </div>
+  <p class='msg'>Welcome Back</p>
+  <div class='form'>
+    <form th:action="@{/loguser}" th:object="${user}" method="post">
+  <input type="text" th:field="*{email}" placeholder='username' class='text' id='username' required><br>
+  <input type="password" th:field="*{password}" placeholder='password' class='password'><br>
+  <input type="submit"  class='btn-login' value="login">
+  <div id="create-account-wrap">
+    <h4><p>Not a member? <a th:href="@{/register}">Create Account</a><p><h4>
+  </div>   
+</form>
+  </div>
+</div>
+ </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+
+    <title>view</title>
+    <link th:href="@{/css/View.css}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="row" th:each="product : ${products}">
+            <div class="col">
+
+                <div class="slider">
+                   
+                    <div class="preview">
+                     <img  src="" th:src="@{${'/productImages/' + product.imageName}}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="content">
+                    <h2 class="card-title" th:text="${product.brand}" style="color: rgb(0, 0, 0);"></h2>
+                  <h2><p th:text="${product.description}" style="color: rgb(0, 0, 0);"></p></h2>
+                    <div>
+                     <h2 class="card-title" th:text="${product.name}" style="color: rgb(0, 0, 0);"></h2>
+                     <h2 style="color: rgb(0, 0, 0);">₹ <span th:text="${product.price}" style="color: rgb(27, 27, 29)
+                     ;"></span></h2>
+                   
+                    </div>
+                  
+                    
+                    <button type="button" onclick="window.location.href='http://localhost:8080/orderform'">
+                        <i class="fa fa-shopping-cart"></i>
+                        Buy Now</button>
+
+                        <button type="button" onclick="window.location.href='http://localhost:8080/shop'">
+                    
+                            Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+                
+         
+
+
+       
+    <script>
+        function clickme(smallImg) {
+
+            var fullImg = document.getElementById("imagebox");
+            fullImg.src = smallImg.src;
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

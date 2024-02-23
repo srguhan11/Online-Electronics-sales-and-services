@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/myorder.css}">
+    <title>Myorders</title>
+</head>
+<body>
+    <div class="container-fluid my-5 d-sm-flex justify-content-center">
+        <div class="card px-2">
+            <p class="bold" style="font-size: 200%;">My Service Order</p>
+            <div class="card-body">
+                
+                <div class="media flex-column flex-sm-row"  th:each="order, iStat : ${orders}">
+                    <div class="media-body ">
+                        <h5 class="bold"  style="margin-top: 10%;">Customer Name:</h5>
+                        <h5 class="bold"  th:text="${order.sname}"></h5>
+                     
+                        <h4  class="mt-3 mb-4 bold" > Model Name:</h4>
+                        <h4 class="mt-3 mb-4 bold"  th:text="${order.modelname}"><span class="mt-5">&#x20B9;</span> <span class="small text-muted"> </span></h4>
+                        <p class="bold" style="color: black;">Complaint:</p>
+                        <p class="bold" style="color: black;" th:text="${order.description}"> <span class="mt-5">&#x20B9;</span> <span class="small text-muted"> </span></h4></p>
+                        <a type="button" style="margin-bottom: 10%; color: white;"  th:href="@{/myorders/delete/{id}(id=${order.ids})}" class="btn">Cancel </a>    
+                    </div>
+                    <img style="margin-left: 5%; margin-bottom: 10%;" class="align-self-center img-fluid"  th:src="@{${'/productImages/' + order.iname}}" width="130 " height="100">
+                </div>
+            </div>
+          
+            
+            <a class="btn" style="color: white; margin-top: 10%; margin-bottom: 10%;" th:href="@{/servicepage}">Back</a>
+        </div>
+    </div>
+</body>
+</html>

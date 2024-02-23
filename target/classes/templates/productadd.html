@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/productadd.css}">
+    <title>Productadd</title>
+</head>
+<body>
+
+   
+             
+<div class="container">
+    <a class="btn " href="#" >.....</a>
+    <a class="btn " href="#" >.....</a>
+    <a class="btn " href="#" >.....</a>
+    <h2><span style="color: #ffff;"></span></h2>
+    <form th:action="@{/admin/products/add}" method="post" th:object="${productDTO}" enctype="multipart/form-data">
+        <div class="row">
+            
+
+                <input type="hidden" name="id" th:field="*{id}">
+                <div class="form-group">
+                   
+                    <label for="name" class="label">Model Name</label>
+                    <input type="text" class="form-control" required th:field="*{name}" name="name" id="name"
+                           placeholder="Enter name">
+
+                </div>
+                <div class="form-group">
+                    <label for="category" class="label">Select Category</label>
+                    <select class="form-control" th:field="*{categoryId}" id="category" name="category">
+                        <option th:each="category :${categories}"
+                                th:value="${category.id}"
+                                th:text="${category.name}"
+                        >
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="label">Price</label>
+                    <input type="number" class="form-control" required th:field="*{price}" name="price" id="price"
+                           placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <label for="brand" class="label">Brand</label>
+                    <input type="text" class="form-control" required th:field="*{brand}" name="brand" id="brandt"
+                           placeholder="brand">
+                </div>
+                <div class="form-group">
+                    <label for="description" class="label">Product Description</label>
+                    <textarea class="form-control" rows="5" th:field="*{description}" name="description" id="description"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+            
+        
+                    <label class="label" for="productImage">Image File</label>
+                    <input type="file" class="pro" name="productImage" accept="image/jpeg, image/png"  id="productImage">
+  
+             
+                    <img src="#" id="imgPreview" height="100px" width="100px" th:src="@{${'/productImages/' + productDTO.imageName}}" style="margin-top: 20px" alt=" ">
+                    <input type="hidden"  name="imgName" th:value="${productDTO.imageName}">
+               
+               
+                
+                <button type="submit" class="btn"><span style="color: #ffff;">Submit</span></button>
+                <a style="margin-left: 20%; color: white;" class="btn" th:href="@{/admin/product}" href="#">Back</a> 
+        </div>
+    </form>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"  xmlns="https://www.thymeleaf.org/">
+
+  <head>
+    <meta charset="utf-8">
+    <title>home page</title>
+    <link rel="stylesheet" th:href="@{/css/Home.css}">
+  </head>
+  <body>
+    <header>
+      <div class="inner-width">
+        <h1 class="logo">Electronics Sales<span style="color:#273b91;">&</span>Service</h1>
+        <nav class="navigation-menu">
+          <a href="#"> Home</a> 
+          <a th:href="@{/login}"> services</a>
+          <a th:href="@{/login}"> shop</a>
+          <a href="#">about</a>
+          <a href="#">Contact</a>
+          <a th:href="@{/login}" class="log_btn"> <i class="fas fa-lock" aria-hidden="false"></i>
+            LOGIN</a>
+        </nav>
+      </div>
+    </header>
+    <div class="word">
+      <h1><p>Rebuilt Your Old Electronic & Get The New Experience</p></h1>
+    </div>  
+    <div class="btn" >
+  <a href="#"><span style="color: #ffff;">Know More</span></a></div>
+  </body>
+</html>

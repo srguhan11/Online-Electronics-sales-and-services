@@ -1,0 +1,22 @@
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+    display: flex;
+}
+
+
+.box_main{
+
+    float: left;
+    box-sizing: border-box;
+
+    width: 30%;
+    margin: 10px;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(255, 255, 255, 0.5);
+    padding: 2px;
+    border-radius:9px;
+}
+

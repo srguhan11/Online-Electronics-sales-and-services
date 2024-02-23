@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          <link rel="stylesheet" th:href="@{/css/product.css}">
+    <title>Product</title>
+</head>
+<body>
+
+    <div class="ad">    <a class="btn btn-primary" th:href="@{/admin/service}" href="#">Back</a></div>
+              
+<div class="container-fluid">
+
+    <a th:href="@{/admin/service/displayservice/serviceadd}" style="margin: 20px 0" class="btn btn-primary">Add Product</a>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">SN</th>
+            <th scope="col">Model Name</th>
+           
+            <th scope="col">Description</th>
+           
+            <th scope="col">Preview</th>
+            <th scope="col">Manage</th>
+            <th scope="col">Clear</th>
+        </tr>
+        </thead>
+      
+        <tbody>
+
+            <tr th:each="service, iStat : ${serviceadd}">
+                <th scope="row" th:text="${iStat.index + 1}">1</th>
+                <td th:text="${service.productname}">Larry</td>
+              
+              
+                <td th:text="${service.description}">Larry</td>
+                
+                <td><img src="" height="100px" width="100px"  th:src="@{${'/productImages/' +service.imagename}}"></td>
+                
+               <td><a href="" th:href="@{/admin/service/displayservice/update/{id}(id=${service.id})}" class="btn btn-primary">Edit</a></td>
+               <td><a href="" th:href="@{/admin/service/displayservice/delete/{id}(id=${service.id})}" class="btn btn-danger">Remove</a></td>
+              
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
+

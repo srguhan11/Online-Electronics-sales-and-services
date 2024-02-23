@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+body{
+
+  background:linear-gradient(to right, #323939, hwb(257 40% 58% / 0.544));
+  background-size: cover;
+  overflow: hidden;
+}
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    opacity: 0.9;
+    
+  }
+
+  .inputContainer {
+    position: relative;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 15px;
+    transform: translate(-10%,-20%);
+  }
+
+
+  .input {
+    color:  #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #d3ced9;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    -moz-appearance: textfield;
+
+  }
+
+  .label {
+    
+    position: absolute;
+    top: 10px;
+    left: -180px;
+    padding: 0 4px;
+    background-color:   #32393900;
+    color: #ffffff;
+    font-size: 22px;
+    transition: 0.5s;
+
+   }
+
+
+   .btn{
+    position: absolute;
+    top: 53%;
+    left: 30%;
+   transform: translate(270%, 10%);
+    background: #273b91;
+   
+    font-weight: 500px;
+    letter-spacing: 2px;
+   border-radius: 5px;
+  padding: 10px 20px;
+    
+  }
+
+  .btn:hover{
+    background:  rgb(14, 13, 13);
+  
+   font-weight: 500;
+
+  }
+
+
+  

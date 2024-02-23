@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/success.css}">
+    <title>success</title>
+</head>
+<body>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <div class="wrapper">
+        <div class="alert_wrap success">
+            <div class="alert_icon">
+              <ion-icon class="icon" name="checkmark"></ion-icon>
+            </div>
+            <div class="content">
+                <p class="title">Success!</p>
+              <p class="info">
+               you  have been successfully  Book your order!
+              </p>
+            </div>
+          <button onclick="window.location.href='http://localhost:8080/shop'">Continue </button>
+        </div>
+    </div> 
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"th:href="@{/css/form.css}">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+        <h2>Product Order Form</h2>
+    </div>
+  <div class="d-flex">
+    <form th:action="@{/oform}" th:object="${orform}" method="post">
+      <label>
+        <span class="name"> Name <span class="required">*</span></span>
+        <input type="text" th:feild="*{name}"  placeholder="name" name="name" required>
+      </label>
+     
+      <label>
+        <span>Email</span>
+        <input type="text" th:feild="*{email}"  name="email"  placeholder="mail@gmail.com" required>
+      </label>
+     <!-- <label>
+        <span>Country <span class="required">*</span></span>
+        <select name="selection">
+       
+        </select>
+      </label>-->
+      <label>
+        <span>Street Address <span class="required">*</span></span>
+        <input type="text" th:feild="*{address}"  name="address" placeholder="House number and street name" required>
+      </label>
+      
+      <label>
+        <span class="name"> phone.No <span class="required">*</span></span>
+        <input type="text" th:feild="*{phone}"  placeholder="enter number" name="phone" required>
+      </label>
+      
+      <label>
+        <span>Town / City <span class="required">*</span></span>
+        <input type="text" th:feild="*{city}"  placeholder="city" name="city"required> 
+      </label>
+      <label>
+        <span>State / County <span class="required">*</span></span>
+        <input type="text" th:feild="*{state}" name="state"  placeholder="state"  required> 
+      </label>
+      <label>
+        <span>Postcode / ZIP <span class="required">*</span></span>
+        <input type="text" th:feild="*{zip}" name="zip"  placeholder="zip code" required> 
+      </label>
+    
+      <input type="submit" value="Continue to checkout" class="btn">
+      <button type="button" class="btn" onclick="window.location.href='http://localhost:8080/shop'">
+                    
+        Back to Shop</button>
+    </form>
+    <div class="Yorder">
+      <table>
+        <tr >
+          <th colspan="2">Your order</th>
+        </tr>
+        <tr th:each="order, iStat : ${orform}">
+          <td>Product Name</td>
+          <td th:text="${order.productname}">Larry</td>
+        </tr>
+        <tr th:each="order, iStat : ${orform}" >
+       
+          <td>total</td>
+          <td  th:text="${order.price}"></td>
+          
+          
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>Free shipping</td>
+        </tr>
+      </table><br>
+    
+      <div>
+        <input type="checkbox" name="dbt" value="cd"  checked> Cash on Delivery
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  
+    </div><!-- Yorder -->
+   </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+body{
+
+  background:linear-gradient(to right, #323939, hwb(257 40% 58% / 0.544));
+  background-size: cover;
+  overflow: hidden;
+}
+.row
+{
+  
+}
+.form-group
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    position: relative;
+    top: 20%;
+    height: 45px;
+    width: 600px;
+    margin-bottom: 35px;
+  
+ 
+}
+.form-control
+{
+    color:  #ffffff;
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    height: 100%;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    -moz-appearance: textfield;
+}
+
+.label
+{
+
+     position: absolute;
+    top: 10px;
+    left: 400px;
+
+    padding: 0 4px;
+    background-color:  #5c5d603e;
+    color: #d3ced9;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+.btn{
+    position: absolute;
+    top: 150%;
+    left: 120%;
+  
+    background: #273b91;
+   
+    font-weight: 500px;
+    letter-spacing: 2px;
+   border-radius: 5px;
+  padding: 10px 20px;
+    
+  }
+
+  .btn:hover{
+    background:  rgb(14, 13, 13);
+  
+   font-weight: 500;
+
+  }
+
+ .pro
+ {
+    position: absolute;
+    top: 30%;
+    left: 100%;
+ }
+  .add
+  {
+    
+  }

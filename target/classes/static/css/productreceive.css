@@ -1,0 +1,86 @@
+.wp-table tr:nth-child(odd) {
+    background-color: #575757;
+}
+
+.wp-table tr:nth-child(even) {
+    background-color: #575757;
+}
+
+.wp-table tr {
+  
+    border-bottom: 1px solid #181818;
+}
+
+.wp-table th:first-child, 
+.wp-table td:first-child {
+    padding-left: 16px;
+}
+
+
+.wp-table td, 
+.wp-table th {
+  
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+   
+}
+
+.wp-table th {
+    font-weight: bold;
+    background-color: black;
+}
+ 
+.wp-table {
+    margin-top: 5%;
+    font-size: 13px!important;
+    border: 1px solid #050505;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+.ad
+{
+    
+    background: #273b91;
+  
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 3%;
+    left: 80%;
+}
+.ad:hover
+{
+    background-color: black;
+}
+
+.btn{
+
+
+    background: #273b91;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+   border-radius: 9px;
+  padding: 5px 15px;
+   
+    
+  }
+  .btn:hover{
+    background:  rgb(14, 13, 13);
+  
+    font-weight: 100;
+    letter-spacing: 0.5px;
+  } 
+
+  .text
+{
+    
+   
+    position: absolute;
+    top: -8%;
+    left: 30%;
+}

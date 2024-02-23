@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+   
+          <link rel="stylesheet" th:href="@{/css/categoryadd.css}">
+    <title>categoryadd</title>
+</head>
+<body>
+
+               
+<div class="container">
+  
+            <div class="signupFrm">
+
+            <form th:action="@{/admin/category/add}" method="post" th:object="${categories}">
+                <input type="hidden" name="id"  th:field="*{id}">
+                
+                <div class="inputContainer">
+
+                    <input type="text" th:field="*{name}"  class="input" placeholder="name" required>
+                    <label for="" class="label">Categories Name</label>
+                  
+                </div>
+                
+            </div>
+                
+            <button type="submit" class="btn"><span style="margin-right: 10%; color: #ffff;">Submit</span></button>
+            <a style="margin-left: 10%; color: white;" class="btn" th:href="@{/admin/category}" href="#">Back</a> 
+               
+        </form>
+ 
+    </div>
+</body>
+</html>

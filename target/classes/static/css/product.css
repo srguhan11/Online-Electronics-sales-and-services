@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+body{
+
+  background:linear-gradient(to right, #323939, hwb(257 40% 58% / 0.544));
+  background-size: cover;
+ 
+}
+.ad
+{
+  transform: translate(90%,150%);
+}
+ table td
+ {
+  font-size: 150%;
+  
+  color: rgb(255, 254, 254);
+ }
+table th
+{
+  color: rgb(255, 255, 255);
+}

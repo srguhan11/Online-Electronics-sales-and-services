@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"  xmlns="https://www.thymeleaf.org/">
+
+  <head>
+    <meta charset="utf-8">
+    <title>admin home</title>
+    <link rel="stylesheet" th:href="@{/css/Receiveorder.css}">
+  </head>
+  <body>
+    <header>
+     
+      <div class="inner-width">
+        <h1 class="logo">Admin<span style="color:#273b91;">Home</span></h1>
+        <nav class="navigation-menu">
+          
+          <a th:href="@{/admin}"> shop</a>
+          <a th:href="@{/admin/service}"> service</a>
+          <a th:href="@{/CompleteOrder}"> CompleteOrders</a>
+         
+         
+          
+          
+          <a th:href="@{/}" class="log_btn"> <i class="fas fa-lock" aria-hidden="false"></i>
+            logout</a>
+        </nav>
+      </div>
+      <div class="word">
+        <h1><p style="color: white;">Receive Orders and Service From Both Product and Service </p></h1>
+      </div>  
+      <div class="pro">
+        <p><h1><span style="color: #000000;">Product</span> </h1>
+
+
+
+         Product   Receive Orders
+        </p>
+      
+      </div>
+      <div class="ser">
+        <p><h1><span style="color: #000000;">Service</span> </h1>
+
+
+          
+         Service Receive Orders
+        </p>
+        
+      </div>
+      <div class="btn" >
+        <a th:href="@{/ProductReceiveOrder}"><span style="color: #ffff;">view</span></a></div>
+        <div class="btn2" >
+            <a  th:href="@{/ServiceReceiveOrder}"><span style="color: #ffff;">View</span></a></div>
+   
+    </header>
+    
+  
+  </body>
+</html>

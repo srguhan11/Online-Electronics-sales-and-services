@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/Productreceive.css}">
+    <title>Product  Completed</title>
+</head>
+<body>
+ <div class="text"> <h6  style="color:rgb(1, 1, 47); font-size: 190%;">COMPLETED PRODUCT ORDER</h6></div>
+  <div class="ad">
+  <a  style="color: white; text-decoration: none" class="btn btn-primary" th:href="@{/CompleteOrder}" href="#">Back</a></div>
+<table class="wp-table" >
+    <tr>
+        <th>S.No</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone.No</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Category</th>
+      
+     <th>ProductName</th>
+      <th>Price</th>
+      <th  scope="col">Process</th>
+    
+      
+
+    
+    </tr>
+    <tr th:each="order, iStat : ${cproductorder}">
+        <th scope="row" th:text="${iStat.index + 1}">1</th>
+        <td th:text="${order.name}">Larry</td>
+        <td th:text="${order.email}">Larry</td>
+         <td th:text="${order.address}">Larry</td>
+        <td th:text="${order.phone}">Larry</td>
+        <td th:text="${order.city}">Larry</td>
+        <td th:text="${order.state}">Larry</td>
+        <td th:text="${order.zip}">Larry</td>
+        <td th:text="${order.category}">Larry</td>
+       <td th:text="${order.productname}">Larry</td>
+        <td th:text="${order.price}">Larry</td>
+        <td style="background-color: blue;">Completed</td>
+      
+      
+    </tr>
+   
+    
+  </table>
+
+
+</body>
+</html>
